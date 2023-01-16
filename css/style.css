@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    
+   
+}
+/* servies section style part start */
+.services-section{
+    background: gainsboro;
+    position: relative;
+    padding: 25px 30px;
+    display: grid;
+    grid-template-columns:repeat(4,auto);
+    justify-content: center;
+    column-gap: 30px;
+}
+.services-section .services-box{
+    width:300px;
+    height:auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0,0.5);
+    position: relative;
+    
+}
+.services-section .services-box .services-col .profile{
+text-align: center;
+
+
+}
+
+.services-section .services-box .services-col .profile .img-box img{
+    width:300px;
+    height:200px;
+
+}
+.services-section .services-box .services-col .profile .img-box{
+position: relative;
+
+}
+.services-section .services-box .services-col .profile .img-box::before{
+content: "";
+position: absolute;
+background:rgba(233, 30, 99, 0.5);
+width: 100%;
+height: 0%;
+bottom: 0;
+left: 0;
+transition: .5s;
+}
+.services-section .services-box .services-col .profile .img-box:hover::before{
+    height: 100%;
+}
+.services-section .services-box .services-col .des{
+    padding: 10px 15px;
+}
+.services-section .services-box .services-col .des p{
+    text-align: justify;
+}
+.services-section .services-box .services-col .viewbtn{
+    text-align: center;
+    padding: 20px 0px;
+}
+.services-section .services-box .services-col .viewbtn a{
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color:white;
+    background: rgb(79, 201, 249);
+}
+/* servies section style part end */
+
+/* responsive part start */
+/* screen size 1200px start */
+@media(max-width:1200px){
+    .services-section{
+        grid-template-columns: repeat(3,auto);
+        row-gap: 30px;
+    }
+}
+
+/* screen size 1200px end */
+/* screen size 991px start */
+@media(max-width:991px){
+    .services-section{
+        grid-template-columns: repeat(2,auto);
+        row-gap: 35px;
+    }
+}
+
+/* screen size 991px end */
+
+
+/* screen size 768px start */
+@media(max-width:768px){
+    .services-section{
+        grid-template-columns: auto;
+        row-gap: 60px;
+      
+    }
+}
+
+/* screen size 768px end */
